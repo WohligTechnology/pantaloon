@@ -1,0 +1,45 @@
+{
+    "title": "Create Answer",
+    "name": "Answer",
+    "jsonPage": "viewAnswer",
+    "desciption": "",
+    "pageType": "create",
+    "urlFields": [
+        "newAnswer"
+    ],
+    "fields": [{
+        "name": "Answer",
+        "type": "text",
+        "tableRef": "answer",
+        "placeholder": "Enter Answer",
+        "id": "name",
+        "validation": [
+            "",
+            "trim",
+            ""
+        ],
+        "url": ""
+    }],
+    "action": [{
+        "name": "submit",
+        "action": "submitAnswer",
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewAnswer"
+            }
+        }
+    }, {
+        "name": "cancel",
+        "sideMenuRedirect": true,
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewAnswer"
+            }
+        }
+    }],
+    "apiCall": {
+        "url": "Answer/save"
+    }
+}

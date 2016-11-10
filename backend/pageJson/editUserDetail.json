@@ -1,0 +1,73 @@
+{
+    "title": "Edit UserDetail",
+    "name": "UserDetail",
+    "jsonPage": "viewUserDetail",
+    "desciption": "",
+    "pageType": "edit",
+    "urlFields": ["_id"],
+    "fields": [
+        {
+        "name": "Store Name",
+        "type": "text",
+        "tableRef": "storeName",
+        "placeholder": "Enter Store Name",
+        "id": "name",
+        "validation": ["", "trim", ""],
+        "url": ""
+    }, {
+        "name": "Store Code",
+        "type": "text",
+        "tableRef": "storeCode",
+        "placeholder": "Enter Store Code",
+        "id": "name",
+        "validation": ["", "trim", ""],
+        "url": ""
+    },  {
+        "name": "Age",
+        "type": "tags",
+        "tableRef": "age",
+        "placeholder": "Enter Age",
+        "id": "status",
+        "validation": ["", "trim", ""],
+        "url": "",
+        "dropDownField": "",
+        "dropDownType": "single",
+        "onView": true,
+        "dropDown": ["Below 25","25 to 30 years","31 to 35 years","36 years and above"]
+    },  {
+        "name": "Tenture",
+        "type": "tags",
+        "tableRef": "tenture",
+        "placeholder": "Enter Tenture",
+        "id": "status",
+        "validation": ["", "trim", ""],
+        "url": "",
+        "dropDownField": "",
+        "dropDownType": "single",
+        "onView": true,
+        "dropDown": ["Less than 3 months","3 months to 1 year","1 to 3 years","3 to 5 years","5 years and above"]
+    }],
+    "action": [{
+        "name": "submit",
+        "action": "submitUserDetail",
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewUserDetail"
+            }
+        }
+    }, {
+        "name": "cancel",
+        "sideMenuRedirect": true,
+        "stateName": "page({id:'viewUserDetail'})"
+    }],
+    "apiCall": {
+        "url": "UserDetail/save",
+        "params": "_id"
+    },
+    "preApi": {
+        "url": "UserDetail/getOne",
+        "params": "_id"
+    }
+
+}
