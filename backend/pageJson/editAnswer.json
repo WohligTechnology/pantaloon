@@ -27,7 +27,11 @@
     }, {
         "name": "cancel",
         "sideMenuRedirect": true,
-        "stateName": "page({id:'viewAnswer'})"
+        "stateName": {
+            "page":"page",
+            "json":{
+             "id":"viewUserDetail"   
+    }}
     }],
     "apiCall": {
         "url": "Answer/save",

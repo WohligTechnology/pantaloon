@@ -93,7 +93,11 @@
     }, {
         "name": "cancel",
         "sideMenuRedirect": true,
-        "stateName": "page({id:'viewUserDetail'})"
+        "stateName": {
+            "page":"page",
+            "json":{
+             "id":"viewUserDetail"   
+            }}
     }],
     "button": [{
         "name": "Excel Export",
