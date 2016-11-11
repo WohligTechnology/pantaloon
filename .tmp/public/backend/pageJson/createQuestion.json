@@ -1,0 +1,45 @@
+{
+    "title": "Create Question",
+    "name": "Question",
+    "jsonPage": "viewQuestion",
+    "desciption": "",
+    "pageType": "create",
+    "urlFields": [
+        "newQuestion"
+    ],
+    "fields": [{
+        "name": "Question",
+        "type": "text",
+        "tableRef": "question",
+        "placeholder": "Enter Question",
+        "id": "name",
+        "validation": [
+            "",
+            "trim",
+            ""
+        ],
+        "url": ""
+    }],
+    "action": [{
+        "name": "submit",
+        "action": "submitQuestion",
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewQuestion"
+            }
+        }
+    }, {
+        "name": "cancel",
+        "sideMenuRedirect": true,
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewQuestion"
+            }
+        }
+    }],
+    "apiCall": {
+        "url": "Question/save"
+    }
+}

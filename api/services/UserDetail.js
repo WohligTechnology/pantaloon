@@ -31,11 +31,17 @@ var schema = new Schema({
  
 });
 
-schema.plugin(deepPopulate, {});
+schema.plugin(deepPopulate, {
+    // populate:{
+    //     'userAnswers.question':{
+    //         select:'question'
+    //     }
+    // }
+});
 schema.plugin(uniqueValidator);
 schema.plugin(timestamps);
 module.exports = mongoose.model('UserDetail', schema);
 
-var exports = _.cloneDeep(require("sails-wohlig-service")(schema));
+var exports = _.cloneDeep(require("sails-wohlig-service")(schema,'userAnswers.question userAnswers.answer','userAnswers.question userAnswers.answer'));
 var model = {};
 module.exports = _.assign(module.exports, exports, model);
