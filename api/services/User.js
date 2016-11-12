@@ -22,12 +22,14 @@ var schema = new Schema({
         type: String,
         default: ""
     },
-    user: {
-        type: Schema.Types.ObjectId,
-        ref: "User",
-        index: true,
-        required: true,
-    },
+
+    // user: {
+    //     type: Schema.Types.ObjectId,
+    //     ref: "User",
+    //     index: true,
+    //     required: true,
+    // },
+
     mobile: {
         type: String,
         default: ""

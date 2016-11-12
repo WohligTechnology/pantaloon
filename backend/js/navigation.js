@@ -6,32 +6,33 @@ var uploadurl = imgurl;
 var navigationservice = angular.module('navigationservice', [])
 
 .factory('NavigationService', function ($http) {
-    var navigation = [{
-        name: "Users",
-        classis: "active",
-        sref: "#/page/viewUser//",
-        icon: "phone"
-    },
+    var navigation = [
+    //     {
+    //     name: "Users",
+    //     classis: "active",
+    //     sref: "#/page/viewUser//",
+    //     icon: "phone"
+    // },
     {
         name: "User Detail",
         classis: "active",
         sref: "#/page/viewUserDetail//",
         icon: "phone"
     }
-    ,
-    {
-        name: "Question",
-        classis: "active",
-        sref: "#/page/viewQuestion//",
-        icon: "phone"
-    }
-    ,
-    {
-        name: "Answer",
-        classis: "active",
-        sref: "#/page/viewAnswer//",
-        icon: "phone"
-    }
+    // ,
+    // {
+    //     name: "Question",
+    //     classis: "active",
+    //     sref: "#/page/viewQuestion//",
+    //     icon: "phone"
+    // }
+    // ,
+    // {
+    //     name: "Answer",
+    //     classis: "active",
+    //     sref: "#/page/viewAnswer//",
+    //     icon: "phone"
+    // }
     
     
     ];
