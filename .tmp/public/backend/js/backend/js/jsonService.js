@@ -90,6 +90,8 @@ jsonservicemod.service('JsonService', function ($http, TemplateService, $state, 
       }
       if (action && action.type == "page") {
         $state.go("page", sendTo);
+      } else if (action && action.type == "redirect") {
+        window.location.href = adminurl + action.action;
       } else if (action && action.type == "apiCallConfirm") {
         globalfunction.confDel(function (value2) {
           if (value2) {
