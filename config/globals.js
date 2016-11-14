@@ -80,6 +80,7 @@ global["chalk"] = require('chalk');
 global["uid"] = require('rand-token').uid;
 global["request"] = require('request');
 global["fs"] = require('fs');
+global["json2xls"] = require('json2xls');
 
 // passport Globals
 global["passport"] = require('passport');

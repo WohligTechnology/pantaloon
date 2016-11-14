@@ -208,7 +208,7 @@ var models = {
         });
     },
     generateExcel: function (name, found, res) {
-         
+
         name = _.kebabCase(name);
         var excelData = [];
         _.each(found, function (singleData) {
@@ -220,11 +220,11 @@ var models = {
             });
             excelData.push(singleExcel);
         });
-        var xls = sails.json2xls(excelData);
+        var xls = json2xls(excelData);
         var folder = "./.tmp/";
         var path = name + "-" + moment().format("MMM-DD-YYYY-hh-mm-ss-a") + ".xlsx";
         var finalPath = folder + path;
-        sails.fs.writeFile(finalPath, xls, 'binary', function (err) {
+        fs.writeFile(finalPath, xls, 'binary', function (err) {
             if (err) {
                 res.callback(err, null);
             } else {
@@ -235,7 +235,7 @@ var models = {
                         res.set('Content-Type', "application/octet-stream");
                         res.set('Content-Disposition', "attachment;filename=" + path);
                         res.send(excel);
-                        sails.fs.unlink(finalPath);
+                        fs.unlink(finalPath);
                     }
                 });
             }
