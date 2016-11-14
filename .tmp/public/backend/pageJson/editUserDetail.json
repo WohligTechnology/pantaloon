@@ -47,37 +47,31 @@
        
         "dropDown": ["Less than 3 months","3 months to 1 year","1 to 3 years","3 to 5 years","5 years and above"]
      },{
-        "name": "User Answers",
+        "name": "Question",
         "type": "box",
         "tableRef": "userAnswers",
         "validation": ["", "trim", ""],
-        "fields": [{
-            "name": "Question",
-            "type": "selectFromTable",
-            "viewType": "viewType",
-            "dropDownType":"single",
-            "searchApi":"searchCall",
-            "tableRef": "question",
-            "tableValue": "question",
-            "onView":true,
-            "placeholder": "Enter Category-Name",
-            "id": "input1",
-            "validation": ["", "trim", ""],
-            "url": "Question/search"
-        },{
-            "name": "Answer",
-            "type": "selectFromTable",
-            "viewType": "viewType",
-            "dropDownType":"single",
-            "searchApi":"searchCall",
-            "tableRef": "answer",
-            "tableValue": "answer",
-            "onView":true,
-            "placeholder": "Enter Category-Name",
-            "id": "input1",
-            "validation": ["", "trim", ""],
-            "url": "Answer/search"
-        }]
+        "fields": [
+     
+        {
+        "name": "Question",
+        "type": "text",
+        "tableRef": "questionString",
+        "placeholder": "Enter Store Name",
+        "id": "name",
+        "onView":true,
+        "validation": ["", "trim", ""],
+        "url": ""
+    },{
+        "name": "Answer",
+        "type": "text",
+        "tableRef": "answerString",
+        "placeholder": "Enter Store Name",
+        "id": "name",
+        "onView":true,
+        "validation": ["", "trim", ""],
+        "url": ""
+    }]
         }
          
     ],
@@ -104,7 +98,7 @@
         "icon": "print",
         "class": "btn-success",
         "type": "redirect",
-        "action": "excelexport"
+        "action": "generateExcel"
     }, {
         "name": "Upload Excel",
         "icon": "delete",
