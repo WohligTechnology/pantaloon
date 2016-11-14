@@ -4,21 +4,19 @@
     "pageType": "view",
     "sendIdWithCreate": true,
     "urlFields": ["_id"],
-    "fields": [
-        {
+    "fields": [{
         "name": "Store Code",
         "isSort": "",
         "tableRef": "storeCode"
-    },  {
+    }, {
         "name": "Store Name",
         "isSort": "",
         "tableRef": "storeName"
-    },   {
+    }, {
         "name": "Age",
         "isSort": "",
         "tableRef": "age"
-    },
-       {    
+    }, {
         "name": "Tenture",
         "isSort": "",
         "tableRef": "tenture"
@@ -50,7 +48,7 @@
         "icon": "print",
         "class": "btn-success",
         "type": "redirect",
-        "action": "excelexport"
+        "action": "userDetail/generateExcel"
     }, {
         "name": "Upload Excel",
         "icon": "delete",

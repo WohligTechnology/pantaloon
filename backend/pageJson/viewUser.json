@@ -51,7 +51,7 @@
         "icon": "print",
         "class": "btn-danger",
         "type": "redirect",
-        "action": "excelexport"
+        "action": "userDetail/generateExcel"
     }, {
         "name": "Upload Excel",
         "icon": "delete",
