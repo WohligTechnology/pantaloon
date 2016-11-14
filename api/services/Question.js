@@ -20,6 +20,6 @@ schema.plugin(uniqueValidator);
 schema.plugin(timestamps);
 module.exports = mongoose.model('Question', schema);
 
-var exports = _.cloneDeep(require("sails-wohlig-service")(schema, "demo2", "demo2"));
+var exports = _.cloneDeep(require("sails-wohlig-service")(schema));
 var model = {};
 module.exports = _.assign(module.exports, exports, model);

@@ -208,6 +208,7 @@ var models = {
         });
     },
     generateExcel: function (name, found, res) {
+         
         name = _.kebabCase(name);
         var excelData = [];
         _.each(found, function (singleData) {

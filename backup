@@ -1,0 +1,27 @@
+   //     {
+        //     "name": "Question",
+        //     "type": "selectFromTable",
+        //     "viewType": "viewType",
+        //     "dropDownType":"single",
+        //     "searchApi":"searchCall",
+        //     "tableRef": "question",
+        //     "tableValue": "question",
+        //     "onView":true,
+        //     "placeholder": "Enter Category-Name",
+        //     "id": "input1",
+        //     "validation": ["", "trim", ""],
+        //     "url": "Question/search"
+        // },{
+        //     "name": "Answer",
+        //     "type": "selectFromTable",
+        //     "viewType": "viewType",
+        //     "dropDownType":"single",
+        //     "searchApi":"searchCall",
+        //     "tableRef": "answer",
+        //     "tableValue": "answer",
+        //     "onView":true,
+        //     "placeholder": "Enter Category-Name",
+        //     "id": "input1",
+        //     "validation": ["", "trim", ""],
+        //     "url": "Answer/search"
+        // },

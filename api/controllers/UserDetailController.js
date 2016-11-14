@@ -1,8 +1,9 @@
 module.exports = _.cloneDeep(require("sails-wohlig-controller"));
 var controller = {
 
-exportEnquiryExcel: function (req, res) {
-    Enquiry
+generateExcel: function (req, res) {
+          
+    UserDetail
       .find({})
       .exec(function (err, response) {
         var excelData = [];
@@ -11,14 +12,14 @@ exportEnquiryExcel: function (req, res) {
           console.log(key);
           row = {};
           row = {
-            "NAME": key.name,
-            "EMAIL": key.email,
-            "MOBILE": key.mobile,
-            "COMMENT": key.comment
-          };
+            "AGE": key.age,
+            "STORECODE": key.storeCode,
+            "STORENAME": key.storeName,
+            "TENTURE": key.tenture
+            };
           excelData.push(row);
         });
-        Config.generateExcel("PartyEnquiries", excelData, res);
+        Config.generateExcel("UserDetail", excelData, res);
       });
   },
 

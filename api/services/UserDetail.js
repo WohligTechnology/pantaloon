@@ -18,15 +18,17 @@ var schema = new Schema({
 
   userAnswers:[{
       question:{
-    type: Schema.Types.ObjectId,
-     ref: 'Question',
+       type: Schema.Types.ObjectId,
+       ref:"Question",
      index: true
       },
       answer:{
     type: Schema.Types.ObjectId,
      ref: 'Answer',
      index: true
-      }
+      },
+      questionString: String,
+      answerString: String
   }]
  
 });
