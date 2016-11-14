@@ -5,5 +5,6 @@ var controller = {
     UserDetail.generateExcel(res);
   },
 
+
 };
 module.exports = _.assign(module.exports, controller);
