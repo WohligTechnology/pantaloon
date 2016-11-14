@@ -236,7 +236,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 .controller('PageJsonCtrl', function ($scope, TemplateService, NavigationService, JsonService, $timeout, $state, $stateParams, $uibModal) {
     $scope.json = JsonService;
     $scope.template = TemplateService.changecontent("none");
-    $scope.menutitle = NavigationService.makeactive("Country List");
+    $scope.menutitle = NavigationService.makeactive("Pantaloon");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
     JsonService.getJson($stateParams.id, function () {});
@@ -571,7 +571,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 .controller('CountryCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $stateParams, toastr) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("country-list");
-    $scope.menutitle = NavigationService.makeactive("Country List");
+    $scope.menutitle = NavigationService.makeactive("Pantaloon");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
     $scope.currentPage = $stateParams.page;
