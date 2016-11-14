@@ -55,7 +55,7 @@ var model = {
             "$unwind": "$userAnswers"
         }];
         Model.aggregate(aggText).exec(function (err, data) {
-            console.log(data);
+       //     console.log(data);
             var excelData = _.map(data, function (n) {
                 var obj = {};
                 obj.storeName = n.storeName;

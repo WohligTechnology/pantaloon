@@ -7,6 +7,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.menutitle = NavigationService.makeactive("Dashboard");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
+    $state.go("page",{
+        id:"viewUserDetail"
+    });
 })
 
 
