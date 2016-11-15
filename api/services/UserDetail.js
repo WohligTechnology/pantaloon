@@ -13,6 +13,10 @@ var schema = new Schema({
         enum: ["Male", "Female"]
     },
 
+    zone: {
+        type: String,
+        enum: ["North", "South","East","West"]
+    },
     storeName: String,
     storeCode: String,
 
@@ -28,10 +32,11 @@ var schema = new Schema({
             index: true
         },
         questionString: String,
-        answerString: String
+       answerString: String
     }]
 
 });
+
 
 schema.plugin(deepPopulate, {
     // populate:{
@@ -62,6 +67,8 @@ var model = {
                 obj.storeCode = n.storeCode;
                 obj.age = n.age;
                 obj.tenture = n.tenture;
+                obj.gender=n.gender;
+                obj.zone=n.zone;
                 obj.question = n.userAnswers.questionString;
                 obj.answer = n.userAnswers.answerString;
                 return obj;
