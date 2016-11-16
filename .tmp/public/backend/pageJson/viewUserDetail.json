@@ -5,10 +5,6 @@
     "sendIdWithCreate": true,
     "urlFields": ["_id"],
     "fields": [{
-        "name": "Store Code",
-        "isSort": "",
-        "tableRef": "storeCode"
-    }, {
         "name": "Store Name",
         "isSort": "",
         "tableRef": "storeName"
@@ -20,7 +16,14 @@
         "name": "Tenture",
         "isSort": "",
         "tableRef": "tenture"
-    }],
+    }, {
+        "name": "Zone",
+        "isSort": "",
+        "tableRef": "zone"
+    }
+    
+    
+    ],
     "action": [{
         "name": "edit",
         "icon": "fa-pencil",

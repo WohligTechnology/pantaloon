@@ -15,14 +15,6 @@
         "validation": ["", "trim", ""],
         "url": ""
     }, {
-        "name": "Store Code",
-        "type": "text",
-        "tableRef": "storeCode",
-        "placeholder": "Enter Store Code",
-        "id": "name",
-        "validation": ["", "trim", ""],
-        "url": ""
-    },  {
         "name": "Age",
         "type": "tags",
         "tableRef": "age",
