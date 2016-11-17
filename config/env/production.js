@@ -26,7 +26,7 @@ module.exports = {
    ***************************************************************************/
 
   port: 80,
-  realHost: "http://pantaloon.wohlig.co.in"
+  realHost: "http://pantaloons.willnevergrowup.com"
 
   /***************************************************************************
    * Set the log level in production environment to "silent"                 *
