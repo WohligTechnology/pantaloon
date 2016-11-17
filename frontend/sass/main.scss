@@ -6,6 +6,7 @@
 @import "../../bower_components/angular-ui-swiper/dist/angular-ui-swiper";
 @import "../../bower_components/fancyBox/source/jquery.fancybox";
 @import "../../bower_components/smart-app-banner/smart-app-banner";
+@import "../../bower_components/angular-ui-select/dist/select";
 
 /* Bootstrap Variables Goes Here */
 
@@ -19,10 +20,6 @@ $brand-info: #000072 !default;
     font-family: 'Glyphicons Halflings';
     src: url("../fonts/glyphicons-halflings-regular.eot");
     src: url("../fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("../fonts/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
-}
-
-body {
-    padding-top: 70px;
 }
 
 img.loading {
@@ -168,9 +165,10 @@ h1 {
 
 .welcome {
     background-image: url("../img/main-bg.png");
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     padding-top: 8%;
+    height: 100vh;
     color: #fff;
     p {
         font-size: 22px;
@@ -329,14 +327,14 @@ input.form-control.ui-select-search.ng-pristine.ng-valid.ng-touched {
     .boy {
         position: absolute;
         right: 5%;
-        bottom: -30%;
-        width: 210px;
+        bottom: -18%;
+        width: 170px;
     }
     .girl {
         position: absolute;
         right: 5%;
-        bottom: -30%;
-        width: 160px;
+        bottom: -18%;
+        width: 120px;
     }
     .refer {
         font-size: 16px;

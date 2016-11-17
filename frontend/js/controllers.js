@@ -469,9 +469,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         }
     });
 
-
-
-
     console.log($scope.myans.length);
     $scope.showDot = function (id) {
         $scope.myans = '';

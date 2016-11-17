@@ -18,6 +18,21 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $lo
             templateUrl: "frontend/views/template.html",
             controller: 'HomeCtrl'
         })
+        .state('details', {
+            url: "/details",
+            templateUrl: "frontend/views/template.html",
+            controller: 'DetailsCtrl'
+        })
+        .state('steps', {
+            url: "/steps",
+            templateUrl: "frontend/views/template.html",
+            controller: 'StepsCtrl'
+        })
+        .state('thankyou', {
+            url: "/thankyou",
+            templateUrl: "frontend/views/template.html",
+            controller: 'ThankYouCtrl'
+        })
         .state('form', {
             url: "/form",
             templateUrl: "frontend/views/template.html",
@@ -74,14 +89,17 @@ firstapp.directive('fancybox', function ($document) {
     };
 });
 
-firstapp.directive('autoHeight', function ($compile, $parse) {
+firstapp.directive('autoHeightfixed', function ($compile, $parse) {
     return {
         restrict: 'EA',
         replace: false,
         link: function ($scope, element, attrs) {
             var $element = $(element);
             var windowHeight = $(window).height();
-            $element.css("min-height", windowHeight);
+            var addHeight = function () {
+                $element.css("height", windowHeight);
+            };
+            addHeight();
         }
     };
 });
