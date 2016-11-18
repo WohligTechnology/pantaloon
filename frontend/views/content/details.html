@@ -77,7 +77,7 @@
                                             <option value="PT-Kolkata-South City Mall">PT-Kolkata-South City Mall</option>
                                             <option value="PT-Kolkata-Camac Street">PT-Kolkata-Camac Street</option>
                                         </select>-->
-                                            <ui-select ng-model="formData.storeName" theme="bootstrap" title="Select Store Name">
+                                            <ui-select ng-model="formData.storeName" title="Select Store Name">
                                                 <ui-select-match placeholder="Select">{{$select.selected.name}}</ui-select-match>
                                                 <ui-select-choices repeat="store in storename | filter: $select.search">
                                                     <div ng-bind-html="store.name | highlight: $select.search"></div>

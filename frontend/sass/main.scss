@@ -207,6 +207,19 @@ h1 {
     }
 }
 
+.ui-select-container {
+    width: 280px;
+    height: 22px;
+    background-color: rgb(255, 255, 255);
+    background-image: url(../img/caret-img.png);
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-size: 20px 22px;
+    .form-control:focus {
+        height: 22px;
+    }
+}
+
 .ui-select-bootstrap>.ui-select-match>.btn {
     width: 280px;
     height: 22px;
