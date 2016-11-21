@@ -3,7 +3,7 @@ templateservicemod.service('TemplateService', function () {
   this.title = "Home";
   this.meta = "Google";
   this.metadesc = "Home";
-  this.pageMax = 10;
+  this.pageMax = 20;
   this.adminurl = adminurl;
   this.accessTokenUrl = adminurl;
   var d = new Date();
