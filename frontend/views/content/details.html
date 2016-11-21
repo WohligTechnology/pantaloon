@@ -1,0 +1,117 @@
+<section auto-heightfixed class="details">
+    <div class="container-fluid">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="grey-bg">
+                <form name="surveyForm">
+                    <div class="content-blk">
+                        <h1>Please fill in these details</h1>
+                        <div class="detail-form">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="select-group">
+                                        <label>Age : </label>
+                                        <div class="sel-div">
+                                            <!--<div class="carrot">
+                                                <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                            </div>-->
+                                            <select ng-model="formData.age" ng-model="formData.age" required>
+                                            <option value="" class selected>Select</option>
+                                            <option value="Below 25">Below 25</option>
+                                            <option value="25 to 30 years">25 to 30 years</option>
+                                            <option value="31 to 35 years">31 to 35 years</option>
+                                            <option value="36 years and above">36 years and above</option>
+                                        </select>
+                                            <!-- <ui-select ng-model="ctrl.person.selected" theme="bootstrap" title="Choose Age Criteria">
+                                            <ui-select-match placeholder="Select">{{$select.selected.name}}</ui-select-match>
+                                            <ui-select-choices repeat="age in ages | filter: $select.search">
+                                                <div ng-bind-html="age.name | highlight: $select.search"></div>
+                                                <small ng-bind-html="item.email | highlight: $select.search"></small>
+                                            </ui-select-choices>
+                                        </ui-select> -->
+                                        </div>
+                                    </div>
+                                    <div class="select-group">
+                                        <label>Tenure at Pantaloons : </label>
+                                        <div class="sel-div">
+                                            <select ng-model="formData.tenture" required>
+                                            <option value="" disabled selected style="display: none;">Select</option>
+                                            <option value="Less than 3 months">Less than 3 months</option>
+                                            <option value="3 months to 1 year">3 months to 1 year</option>
+                                            <option value="1 to 3 years">1 to 3 years</option>
+                                            <option value="3 to 5 years">3 to 5 years</option>
+                                            <option value="5 years and above">5 years and above</option>
+                                        </select>
+                                            <!-- <ui-select ng-model="ctrl.person.selected" theme="bootstrap" title="Select Tenure">
+                                            <ui-select-match placeholder="Select">{{$select.selected.name}}</ui-select-match>
+                                            <ui-select-choices repeat="ten in tenure | filter: $select.search">
+                                                <div ng-bind-html="ten.name | highlight: $select.search"></div>
+                                                <small ng-bind-html="item.email | highlight: $select.search"></small>
+                                            </ui-select-choices>
+                                        </ui-select> -->
+                                        </div>
+                                    </div>
+                                    <div class="select-group">
+                                        <label>Gender : </label>
+                                        <div class="sel-div">
+                                            <select ng-model="formData.gender" required>
+                                            <option value="" disabled selected style="display: none;">Select</option>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                        </select>
+                                            <!-- <ui-select ng-model="ctrl.person.selected" theme="bootstrap" title="Select Gender">
+                                            <ui-select-match placeholder="Select">{{$select.selected.name}}</ui-select-match>
+                                            <ui-select-choices repeat="gens in gender | filter: $select.search">
+                                                <div ng-bind-html="gens.gen | highlight: $select.search"></div>
+                                                <small ng-bind-html="item.email | highlight: $select.search"></small>
+                                            </ui-select-choices>
+                                        </ui-select> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="select-group">
+                                        <label>Store Name : </label>
+                                        <div class="sel-div">
+                                            <!--<select ng-model="formData.storeName" required>
+                                            <option value="" disabled selected style="display: none;">Select</option>
+                                            <option value="PT-Kolkata-South City Mall">PT-Kolkata-South City Mall</option>
+                                            <option value="PT-Kolkata-Camac Street">PT-Kolkata-Camac Street</option>
+                                        </select>-->
+                                            <ui-select ng-model="formData.storeName" title="Select Store Name">
+                                                <ui-select-match placeholder="Select">{{$select.selected.name}}</ui-select-match>
+                                                <ui-select-choices repeat="store in storename | filter: $select.search">
+                                                    <div ng-bind-html="store.name | highlight: $select.search"></div>
+                                                    <!--<small ng-bind-html="item.email | highlight: $select.search"></small>-->
+                                                </ui-select-choices>
+                                            </ui-select>
+                                        </div>
+                                    </div>
+                                    <div class="select-group">
+                                        <label>Zone : </label>
+                                        <div class="sel-div">
+                                            <select ng-model="formData.zone" required>
+                                            <option value="" disabled selected style="display: none;">Select</option>
+                                            <option value="North">North</option>
+                                            <option value="South">South</option>
+                                            <option value="East">East</option>
+                                            <option value="West">West</option>
+                                        </select>
+                                            <!-- <ui-select ng-model="ctrl.person.selected" theme="bootstrap" title="Select Zone">
+                                            <ui-select-match placeholder="Select">{{$select.selected.name}}</ui-select-match>
+                                            <ui-select-choices repeat="z in zone | filter: $select.search">
+                                                <div ng-bind-html="z.name | highlight: $select.search"></div>
+                                                <small ng-bind-html="item.email | highlight: $select.search"></small>
+                                            </ui-select-choices>
+                                        </ui-select> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="begin btn btn-default" ui-sref="steps" ng-click="detailSubmit(formData)" ng-disabled="surveyForm.$invalid">Click here to begin!</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,61 @@
+<section auto-heightfixed class="steps">
+    <div class="container-fluid">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="grey-bg">
+                <div class="content-blk">
+                    <h1 class>
+                        {{ questions[q].question }}
+                    </h1>
+                    <p class="refer">(You may want to refer to the language translated sheet before choosing the answer)</p>
+                    <div class="outer-pad">
+                        <div class="prog-bar">
+                            <div class="main-opt">
+                                <div class="radio-btn opt-1" ng-click="showDot(1)">
+                                    <div class="dot" ng-show="displayDot1"></div>
+                                </div>
+                                <p class="ans">Strongly Agree</p>
+                            </div>
+                            <div class="main-opt">
+                                <div class="radio-btn opt-2" ng-click="showDot(2)">
+                                    <div class="dot" ng-show="displayDot2"></div>
+                                </div>
+                                <p class="ans ans-2">Agree</p>
+                            </div>
+                            <div class="main-opt">
+                                <div class="radio-btn opt-3" ng-click="showDot(3)">
+                                    <div class="dot" ng-show="displayDot3"></div>
+                                </div>
+                                <p class="ans ans-3">Not Sure</p>
+                            </div>
+                            <div class="main-opt">
+                                <div class="radio-btn opt-4" ng-click="showDot(4)">
+                                    <div class="dot" ng-show="displayDot4"></div>
+                                </div>
+                                <p class="ans ans-4">Disagree</p>
+                            </div>
+                            <div class="main-opt">
+                                <div class="radio-btn opt-5" ng-click="showDot(5)">
+                                    <div class="dot" ng-show="displayDot5"></div>
+                                </div>
+                                <p class="ans ans-5">Strongly Disagree</p>
+                            </div>
+                            <!--<span class="ans1">Strongly Agree</span>
+                            <span class="ans2">Agree</span>
+                            <span class="ans3">Not Sure</span>
+                            <span class="ans4">Disagree</span>
+                            <span class="ans4">Disagree</span>-->
+                        </div>
+                    </div>
+                    <!-- <button type="button" class="next btn btn-default" ng-click="nextQtn(q);">Submit</button> -->
+                    <button type="button" class="next btn btn-default" ng-click="quesAns(questions[q].question);nextQtn(q);" ng-disabled="!myans.length">Next </button>
+                    <div class="boy" ng-show="boy">
+                        <img src="frontend/img/boy.png" class="img-responsive" alt="">
+                    </div>
+                    <div class="girl" ng-show="girl">
+                        <img src="frontend/img/girl.png" class="img-responsive" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
