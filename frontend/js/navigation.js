@@ -28,14 +28,14 @@ var navigationservice = angular.module('navigationservice', [])
         getnav: function () {
             return navigation;
         },
-        formSubmit: function (input, callback) {
+        formSubmit: function (input, callback,err) {
             console.log('Navigation form data: ', input);
             $http({
                 url: adminurl + 'UserDetail/save',
                 method: 'POST',
                 data: input
 
-            }).success(callback);
+            }).success(callback).error(err);
         },
         makeactive: function (menuname) {
             for (var i = 0; i < navigation.length; i++) {
