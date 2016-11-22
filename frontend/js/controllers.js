@@ -464,7 +464,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
             console.log('herer');
         } else {
-            var answer = alert("You cannot view your previous answer");
+            var answer = alert("Hi! You cannot go back in the middle of the survey.");
             event.preventDefault();
         }
     });
@@ -627,14 +627,14 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                 if (data.value == true) {
                     $state.go("thankyou");
                 } else {
-                    alert("Error in Submitting Feedback!!");
+                    alert("Hi! Looks like there is an issue with the Internet on your machine. Please check and re-submit.");
                 }
                 // console.log(data);
                 // console.log('$scope.finalData',$scope.finalData);
 
             }, function (err) {
                 console.log(err);
-                alert("Error in Submitting Feedback!!");
+                alert("Hi! Looks like there is an issue with the Internet on your machine. Please check and re-submit.");
             });
         }
         $scope.myans = '';
