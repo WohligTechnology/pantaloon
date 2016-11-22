@@ -4,7 +4,7 @@ if (isproduction) {
 } else {
     adminURL = "http://localhost/demo/index.php";
 }
-var adminurl = "http://104.198.112.171:80/api/";
+var adminurl = "http://pantaloons.willnevergrowup.com:80/api/";
 var navigationservice = angular.module('navigationservice', [])
 
 .factory('NavigationService', function ($http) {
