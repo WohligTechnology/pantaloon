@@ -26,8 +26,7 @@ var schema = new Schema({
         required: true
     },
     storeCode: {
-        type: String,
-        required: true
+        type: String
     },
 
     userAnswers: [{
