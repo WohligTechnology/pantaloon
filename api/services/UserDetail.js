@@ -2,23 +2,33 @@ var objectid = require("mongodb").ObjectId;
 var schema = new Schema({
     age: {
         type: String,
-        enum: ["Below 25", "25 to 30 years", "31 to 35 years", "36 years and above"]
+        enum: ["Below 25", "25 to 30 years", "31 to 35 years", "36 years and above"],
+        required: true
     },
     tenture: {
         type: String,
-        enum: ["Less than 3 months", "3 months to 1 year", "1 to 3 years", "3 to 5 years", "5 years and above"]
+        enum: ["Less than 3 months", "3 months to 1 year", "1 to 3 years", "3 to 5 years", "5 years and above"],
+        required: true
     },
     gender: {
         type: String,
-        enum: ["Male", "Female"]
+        enum: ["Male", "Female"],
+        required: true
     },
 
     zone: {
         type: String,
-        enum: ["North", "South","East","West"]
+        enum: ["North", "South", "East", "West"],
+        required: true
     },
-    storeName: String,
-    storeCode: String,
+    storeName: {
+        type: String,
+        required: true
+    },
+    storeCode: {
+        type: String,
+        required: true
+    },
 
     userAnswers: [{
         question: {
@@ -32,7 +42,7 @@ var schema = new Schema({
             index: true
         },
         questionString: String,
-       answerString: String
+        answerString: String
     }]
 
 });
@@ -60,15 +70,15 @@ var model = {
             "$unwind": "$userAnswers"
         }];
         Model.aggregate(aggText).exec(function (err, data) {
-       //     console.log(data);
+            //     console.log(data);
             var excelData = _.map(data, function (n) {
                 var obj = {};
                 obj.storeName = n.storeName;
-            //    obj.storeCode = n.storeCode;
+                //    obj.storeCode = n.storeCode;
                 obj.age = n.age;
                 obj.tenture = n.tenture;
-                obj.gender=n.gender;
-                obj.zone=n.zone;
+                obj.gender = n.gender;
+                obj.zone = n.zone;
                 obj.question = n.userAnswers.questionString;
                 obj.answer = n.userAnswers.answerString;
                 return obj;
