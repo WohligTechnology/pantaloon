@@ -65,22 +65,24 @@ var model = {
         var Model = this;
 
         var aggText = [];
-        aggText = [{
-            "$unwind": "$userAnswers"
-        }];
-        Model.aggregate(aggText).exec(function (err, data) {
-            var excelData = _.map(data, function (n) {
+
+        Model.find().exec(function (err, data) {
+            var excelData = [];
+            _.each(data, function (n) {
                 var obj = {};
                 obj.storeName = n.storeName;
                 obj.age = n.age;
                 obj.tenture = n.tenture;
                 obj.gender = n.gender;
                 obj.zone = n.zone;
-                obj.question = n.userAnswers.questionString;
-                obj.answer = n.userAnswers.answerString;
-                return obj;
+                _.each(n.userAnswers, function (m) {
+                    var newObj = _.clone(obj);
+                    newObj.question = m.questionString;
+                    newObj.answer = m.answerString;
+                    excelData.push(newObj);
+                });
+                excelData.push(obj);
             });
-            console.log(excelData);
             Config.generateExcel("FeedbackExport", excelData, res);
 
         });

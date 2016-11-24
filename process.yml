@@ -3,4 +3,3 @@ apps:
     name: "Pantaloons"
     watch: true
     args: "--prod"
-    node_args: "--max-old-space-size=4096"
