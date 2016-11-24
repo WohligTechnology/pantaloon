@@ -69,11 +69,9 @@ var model = {
             "$unwind": "$userAnswers"
         }];
         Model.aggregate(aggText).exec(function (err, data) {
-            //     console.log(data);
             var excelData = _.map(data, function (n) {
                 var obj = {};
                 obj.storeName = n.storeName;
-                //    obj.storeCode = n.storeCode;
                 obj.age = n.age;
                 obj.tenture = n.tenture;
                 obj.gender = n.gender;
