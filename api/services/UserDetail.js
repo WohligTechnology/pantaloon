@@ -80,7 +80,7 @@ var model = {
                 obj.answer = n.userAnswers.answerString;
                 return obj;
             });
-
+            console.log(excelData);
             Config.generateExcel("FeedbackExport", excelData, res);
 
         });
